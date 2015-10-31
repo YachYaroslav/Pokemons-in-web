@@ -9,7 +9,7 @@
             Armor = 5;
             UniqueMove = 3;
             Moves = 0;
-            Die = true;
+            Die = false;
             _health = 10;
         }
         public int Id { get; set; }
@@ -17,9 +17,9 @@
         public int Damage { get; set; }
         public int Armor { get; set; }
         public int UniqueMove { get; set; }
-        public int Moves = 0;
-        public bool Die = false;
-        private int _health = 10;
+        public int Moves;
+        public bool Die;
+        private int _health;
         public int Health
         {
             get { return _health; }
