@@ -1,0 +1,34 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div> 
+    @if (ViewBag.CountOfPok > 0)
+    {
+    <table>
+        <thead>
+            <tr>
+                <td>Ім'я покемона</td>
+                <td>ID покемона</td>
+                <td rowspan="2"></td>
+                <td rowspan="2"></td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var el in ViewBag.Pokemons)
+            {
+                <tr>
+                    <td><a title="Переглянути покемона @el.Name" href="/Pokemon/ViewPokemon?Id=@el.Id">@el.Name</a></td>
+                    <td>@el.Id</td>
+                    <td><a title="Відредагувати покемона @el.Name" href="/Pokemon/Index?Id=@el.Id">Редагувати</a></td>
+                    <td><a title="Видалити покемона @el.Name" href="/Pokemon/DelPokemon?Id=@el.Id">Видалити</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    }
+    else
+    {
+        <div class="blockCenter warning">Покемонів немає...</div>
+    }
+</div>
+<!-- Yaroslav Yachmenov -->

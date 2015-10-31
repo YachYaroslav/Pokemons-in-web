@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="add_pokemon"> 
+    <div id="is_pokemons">Вже наявно покемонів: @ViewBag.CountOfPok шт.</div>
+    <div class="blockCenter"><hr class="hr" /></div>
+    @using (Html.BeginForm("AddPokemon", "Pokemon", FormMethod.Post))
+    {
+        <div class="blockCenter" id="blockDescription"> @ViewBag.Title </div>
+        @Html.TextBox("Id", ViewData["Id"], new { style = "display:none" })
+        <p>Ім'я:</p>
+        @Html.TextBox("Name", ViewData["Name"])
+        <p>Стартове здоров'я:</p>
+        @Html.TextBox("Health", ViewData["Health"])
+        <p>Дамаг:</p>
+        @Html.TextBox("Damage", ViewData["Damage"])
+        <p>Захист:</p>
+        @Html.TextBox("Armor", ViewData["Armor"])
+        <p>Крок, на який можна викликати унікальну можливість (далі на кратний йому):</p>
+        @Html.TextBox("UniqueMove", ViewData["UniqueMove"])
+        <br />
+        <input type="submit" value="@ViewBag.ButtonTitle" />
+        <div style="clear:both"></div>
+    }
+</div>
+<!-- Yaroslav Yachmenov -->

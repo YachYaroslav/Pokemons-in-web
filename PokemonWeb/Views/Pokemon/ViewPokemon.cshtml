@@ -1,0 +1,13 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="view_pokemon">
+   <div class="radialBlockName">
+       <p class="beautyName">@ViewBag.Pokemon.Name</p>
+    </div>
+   <p><b>Здоров'я:</b> @ViewBag.Pokemon.Health</p>
+   <p><b>Дамаг:</b> @ViewBag.Pokemon.Damage</p>
+   <p><b>Захист:</b> @ViewBag.Pokemon.Armor</p>
+   <p><b>Атака після кожного <span style="color:blueviolet;">@ViewBag.Pokemon.UniqueMove-го</span> кроку</b></p>
+</div>
+<!-- Yaroslav Yachmenov -->
